@@ -1,0 +1,57 @@
+.form-container {
+    /* max-width: 350px; */
+    background: #F8F9FD;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 40px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 30px 30px -20px;
+    margin: 20px;
+  }
+
+ 
+  .rating {
+    display: inline-block;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    float: right;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+  }
+  
+  .rating label:before {
+    content: '\2605';
+    font-size: 30px;
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color:  #ffc73a;
+    transition: color 0.3s;
+  }
+
+
+  .stars {
+    display: inline-block;
+}
+
+.stars::before {
+    content: '\2605'; /* Unicode character for solid star */
+    font-size: 30px;
+    color:  #ffc73a;
+}
+
+.stars.empty::before {
+    content: '\2606'; /* Unicode character for hollow star */
+    color:  #ffc73a;
+    font-size: 30px;
+} 
+
+
